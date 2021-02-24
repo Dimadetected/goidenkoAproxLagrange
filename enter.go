@@ -6,7 +6,7 @@ import (
 
 const maxStep = 10
 
-var k, f, a float64
+var k, f, a, m float64
 var i, n int
 var Knots []float64
 var Funcs []float64
@@ -42,7 +42,7 @@ func enterKnot() {
 	Knots = make([]float64, n, n)
 
 	fmt.Println("Введите узлы:")
-	for i = 0; i < n; i++ {
+	for i = 0; i <= n; i++ {
 		fmt.Scan(&k)
 		Knots[i] = k
 	}
@@ -54,7 +54,7 @@ func enterKnot() {
 func enterFunc() {
 	Funcs = make([]float64, n, n)
 	fmt.Println("Введите значения функций в узлах:")
-	for i = 0; i < n; i++ {
+	for i = 0; i <= n; i++ {
 		fmt.Scan(&f)
 		Funcs[i] = f
 	}
@@ -64,4 +64,9 @@ func enterFunc() {
 func enterA() {
 	fmt.Println("Введите точку а:")
 	fmt.Scan(&a)
+}
+
+func enterM() {
+	fmt.Println("Введите константу для оценки n:")
+	fmt.Scan(&m)
 }
