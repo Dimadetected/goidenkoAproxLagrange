@@ -8,10 +8,9 @@ import (
 func main() {
 	Enter()
 	mainSum()
-	fmt.Println(answerSum)
+	fmt.Print("L_", n, "(a) = ", answerSum, "\n")
 
 	enterM()
-	errorRating()
-
-	time.Sleep(3 * time.Second)
+	fmt.Println("Оценка погрешности: ", errorRating())
+	time.Sleep(time.Second * 3)
 }

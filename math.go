@@ -5,14 +5,14 @@ import "math"
 var answerSum float64 = 0
 
 func mainSum() {
-	for i = 0; i < n; i++ {
-		answerSum += Funcs[i] * compositionFiX(i)
+	for i = 0; i <= n; i++ {
+		answerSum = answerSum + (Funcs[i] * compositionFiX(i))
 	}
 }
 
 func compositionFiX(i int) float64 {
 	var compos float64 = 1
-	for j := 0; j < n; j++ {
+	for j := 0; j <= n; j++ {
 		if i != j {
 			compos *= (a - Knots[j]) / (Knots[i] - Knots[j])
 		}
@@ -31,7 +31,7 @@ func derivative() float64 {
 
 func errorRatingCompose() float64 {
 	var compose float64 = 1
-	for i = 0; i < n; i++ {
+	for i = 0; i <= n; i++ {
 		compose *= a - Knots[i]
 	}
 	return compose
