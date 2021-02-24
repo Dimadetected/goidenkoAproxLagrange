@@ -63,8 +63,8 @@ func enterFunc() {
 	fmt.Println("Значения функций в узлах:")
 	for i = 0; i <= n; i++ {
 		//fmt.Scan(&f)
-		Funcs[i] = testF1(Knots[i])
-		//Funcs[i] = testF2(Knots[i])
+		//Funcs[i] = testF1(Knots[i])
+		Funcs[i] = testF2(Knots[i])
 	}
 	fmt.Println(Funcs)
 }

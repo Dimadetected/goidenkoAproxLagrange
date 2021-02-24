@@ -12,5 +12,6 @@ func main() {
 
 	enterM()
 	fmt.Println("Оценка погрешности: ", errorRating())
-	time.Sleep(time.Second * 3)
+	fmt.Println("Оценка погрешности sin(x): ", errorRatingSin())
+	time.Sleep(time.Second * 30)
 }

@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 var answerSum float64 = 0
 
@@ -24,9 +27,15 @@ func compositionFiX(i int) float64 {
 func errorRating() float64 {
 	return derivative() / fact(float64(n)+1) * math.Abs(errorRatingCompose())
 }
+func errorRatingSin() float64 {
+	return derivativeSin() / fact(float64(n)+1) * math.Abs(errorRatingCompose())
+}
 
 func derivative() float64 {
 	return m
+}
+func derivativeSin() float64 {
+	return math.Sin(a)
 }
 
 //Факториал
