@@ -22,11 +22,21 @@ func compositionFiX(i int) float64 {
 
 //Оценка погрешности
 func errorRating() float64 {
-	return derivative() / (float64(n) + 1) * math.Abs(errorRatingCompose())
+	return derivative() / fact(float64(n)+1) * math.Abs(errorRatingCompose())
 }
 
 func derivative() float64 {
 	return m
+}
+
+//Факториал
+func fact(a float64) float64 {
+
+	var i, sum float64 = 2, 1
+	for i = 2; i <= a; i++ {
+		sum *= i
+	}
+	return sum
 }
 
 func errorRatingCompose() float64 {
